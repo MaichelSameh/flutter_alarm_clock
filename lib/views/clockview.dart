@@ -28,10 +28,13 @@ class _ClockViewState extends State<ClockView> {
       child: Container(
         width: widget.size,
         height: widget.size,
-        child: Transform.rotate(
-          angle: -pi / 2,
-          child: CustomPaint(
-            painter: ClockPainter(),
+        child: FittedBox(
+          fit: BoxFit.fitWidth,
+          child: Transform.rotate(
+            angle: -pi / 2,
+            child: CustomPaint(
+              painter: ClockPainter(),
+            ),
           ),
         ),
       ),
